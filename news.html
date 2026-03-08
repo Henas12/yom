@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>News & Events | Yom Business - Ethiopian Market Information</title>
+    <meta name="description" content="Latest business news, market updates, and events in Ethiopia. Stay informed with Yom Business.">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Yom <span class="logo-light">Business</span></h1>
+                    <p class="logo-tagline">Ethiopian Market Information</p>
+                </a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="news.html" class="nav-link active">News & Events</a></li>
+                    <li><a href="prices.html" class="nav-link">Prices</a></li>
+                    <li><a href="jobs.html" class="nav-link">Jobs</a></li>
+                    <li><a href="marketplace.html" class="nav-link">Marketplace</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Language toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active">EN</button>
+                <button class="lang-btn amharic">አማ</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>News & Events</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>News & Events</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED NEWS ==================== -->
+    <section class="section" style="padding: 40px 0;">
+        <div class="container">
+            <div class="featured-article" id="featuredArticle">
+                <!-- Featured article will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWS MAIN SECTION ==================== -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="news-layout">
+                <!-- Main Content -->
+                <div class="news-main">
+                    <!-- Category Tabs -->
+                    <div class="category-tabs" style="margin-bottom: 30px;">
+                        <button class="category-tab active" data-category="all">All</button>
+                        <button class="category-tab" data-category="business">Business</button>
+                        <button class="category-tab" data-category="finance">Finance</button>
+                        <button class="category-tab" data-category="technology">Technology</button>
+                        <button class="category-tab" data-category="events">Events</button>
+                        <button class="category-tab" data-category="market">Market</button>
+                    </div>
+                    
+                    <!-- Search Bar -->
+                    <div style="margin-bottom: 30px; display: flex; gap: 10px;">
+                        <input type="text" id="newsSearch" placeholder="Search news..." style="flex: 1; padding: 12px; border: 1px solid var(--border-color); border-radius: 5px;">
+                        <button class="btn btn-primary" id="searchNewsBtn"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                    
+                    <!-- News Grid -->
+                    <div class="news-grid" id="newsGrid">
+                        <!-- News will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination" id="newsPagination"></div>
+                </div>
+                
+                <!-- Sidebar -->
+                <aside class="news-sidebar">
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#" data-category="all">All <span class="count" id="countAll">24</span></a></li>
+                            <li><a href="#" data-category="business">Business <span class="count" id="countBusiness">8</span></a></li>
+                            <li><a href="#" data-category="finance">Finance <span class="count" id="countFinance">6</span></a></li>
+                            <li><a href="#" data-category="technology">Technology <span class="count" id="countTech">4</span></a></li>
+                            <li><a href="#" data-category="events">Events <span class="count" id="countEvents">3</span></a></li>
+                            <li><a href="#" data-category="market">Market <span class="count" id="countMarket">3</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Recent News</h3>
+                        <div id="recentPosts">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Popular Tags</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <span style="background: var(--bg-light); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;">Business</span>
+                            <span style="background: var(--bg-light); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;">Market</span>
+                            <span style="background: var(--bg-light); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;">Banking</span>
+                            <span style="background: var(--bg-light); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;">Economy</span>
+                            <span style="background: var(--bg-light); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;">Investment</span>
+                            <span style="background: var(--bg-light); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;">Technology</span>
+                            <span style="background: var(--bg-light); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; cursor: pointer;">Trade Fair</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget">
+                        <h3>Newsletter</h3>
+                        <p>Get the latest news delivered to your inbox</p>
+                        <form class="newsletter-form" style="flex-direction: column;">
+                            <input type="email" placeholder="Your email" style="width: 100%; margin-bottom: 10px;">
+                            <button type="submit" class="btn-subscribe" style="width: 100%;">Subscribe</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== UPCOMING EVENTS ==================== -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="section-subtitle">Business and networking events in Ethiopia</p>
+            </div>
+            
+            <div class="events-grid" id="upcomingEvents">
+                <!-- Events will be populated by JavaScript -->
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-outline" id="viewAllEvents">View All Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWS MODAL ==================== -->
+    <div class="modal" id="newsModal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="modal-close" id="closeNewsModal">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About Yom Business</h3>
+                    <p>Yom Business is a reliable information platform providing Ethiopian market data, business news, and classified listings all in one place.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="prices.html">Prices</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +251 911 234 567</p>
+                    <p><i class="fas fa-envelope"></i> info@yombusiness.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bole Road, Addis Ababa, Ethiopia</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive latest updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2016 E.C. Yom Business. All rights reserved.</p>
+                <p>Yom Business - Ethiopian Market Information</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>

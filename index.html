@@ -1,402 +1,329 @@
 <!DOCTYPE html>
-<html lang="am" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ዮም - Ethiopian Business</title>
-    <meta name="description" content="የኢትዮጵያ የገበያ መረጃ፣ የምንዛሪ ዋጋ፣ የስራ እድሎች እና የንግድ ማስታወቂያዎች">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Google Fonts for Amharic and English -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Yom Business - Ethiopian Market Information Hub</title>
+    <meta name="description" content="Your trusted source for Ethiopian market information, commodity prices, exchange rates, jobs, and marketplace">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-to-content">ወደ ዋናው ይዘት ይሂዱ</a>
-
-    <!-- Header and Navigation -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo-container">
-                <a href="/" class="logo">
-                    <h1><i class="fas fa-chart-line"></i>ዮም</h1>
-                    <span class="logo-subtitle">Ethiopian Business</span>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Yom <span class="logo-light">Business</span></h1>
+                    <p class="logo-tagline">Ethiopian Market Information</p>
                 </a>
             </div>
-
-            <!-- Mobile menu toggle -->
-            <button class="mobile-menu-toggle" aria-label="ማስኬድ ምናሌ ክፈት/ዝጋ" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-
-            <!-- Main Navigation -->
-            <nav class="main-nav" role="navigation" aria-label="ዋና አሰሳ">
+            
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> መነሻ</a></li>
-                    <li><a href="#news" class="nav-link"><i class="fas fa-newspaper"></i> ዜና</a></li>
-                    <li><a href="#prices" class="nav-link"><i class="fas fa-tags"></i> የዕቃ ዋጋ</a></li>
-                    <li><a href="#currency" class="nav-link"><i class="fas fa-money-bill-wave"></i> ምንዛሪ</a></li>
-                    <li><a href="#jobs" class="nav-link"><i class="fas fa-briefcase"></i> ስራ</a></li>
-                    <li><a href="#marketplace" class="nav-link"><i class="fas fa-store"></i> ገበያ</a></li>
-                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> አግኙን</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="news.html" class="nav-link">News & Events</a></li>
+                    <li><a href="prices.html" class="nav-link">Prices</a></li>
+                    <li><a href="jobs.html" class="nav-link">Jobs</a></li>
+                    <li><a href="marketplace.html" class="nav-link">Marketplace</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-
-            <!-- Language Selector -->
-            <div class="language-selector">
-                <button class="lang-btn active" data-lang="am">አማ</button>
-                <button class="lang-btn" data-lang="en">ENG</button>
+            
+            <!-- Language toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active">EN</button>
+                <button class="lang-btn amharic">አማ</button>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="home" class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="hero-title">የኢትዮጵያ ገበያ መረጃ በአንድ ላይ</h2>
-                    <p class="hero-subtitle">የዕለት ከፍለት ዕቃዎች ዋጋ፣ የምንዛሪ ዋጋ፣ የስራ እድሎች እና የንግድ ማስታወቂያዎች</p>
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- ========== HERO SECTION WITH SLIDING IMAGES AND EXCHANGE RATES ========== -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <!-- Left side - Sliding Images -->
+                <div class="hero-slider">
+                    <div class="slider-container" id="sliderContainer">
+                        <div class="slide active">
+                            <img src="https://images.unsplash.com/photo-1579532536935-61992823f6b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Addis Ababa City">
+                            <div class="slide-caption">
+                                <h3>Welcome to Yom Business</h3>
+                                <p>Your trusted Ethiopian market information hub</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Ethiopian Market">
+                            <div class="slide-caption">
+                                <h3>Daily Commodity Prices</h3>
+                                <p>Track prices across major Ethiopian cities</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Business and Finance">
+                            <div class="slide-caption">
+                                <h3>Exchange Rates</h3>
+                                <p>Updated foreign currency rates in Ethiopian Birr</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider controls -->
+                    <button class="slider-btn prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+                    
+                    <!-- Slider dots -->
+                    <div class="slider-dots" id="sliderDots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                
+                <!-- Right side - Exchange Rate Mini Table -->
+                <div class="hero-exchange">
+                    <div class="exchange-mini-header">
+                        <h3><i class="fas fa-chart-line"></i> Quick Exchange Rates</h3>
+                        <span class="exchange-date ethiopian-date" id="exchangeMiniDate">Tikimt 15, 2016 E.C.</span>
+                    </div>
+                    
+                    <div class="exchange-mini-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>Buy</th>
+                                    <th>Sell</th>
+                                    <th>Change</th>
+                                </tr>
+                            </thead>
+                            <tbody id="exchangeMiniBody">
+                                <!-- Will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="exchange-mini-footer">
+                        <a href="#exchange" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero stats below -->
+            <div class="hero-stats-container">
+                <div class="container">
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">ቀን 24</span>
-                            <span class="stat-label">የተዘመነ መረጃ</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">ከተማ 12+</span>
-                            <span class="stat-label">የገበያ ዋጋ</span>
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Daily Users</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">500+</span>
-                            <span class="stat-label">ቀንድ ስራ</span>
+                            <span class="stat-label">Businesses</span>
                         </div>
-                    </div>
-                    <a href="#prices" class="cta-button">የዕለት ዋጋ ይመልከቱ <i class="fas fa-arrow-down"></i></a>
-                </div>
-                <div class="hero-image">
-                    <!-- Placeholder for hero image -->
-                    <div class="image-placeholder">
-                        <i class="fas fa-chart-bar"></i>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Cities</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- News and Announcements Section -->
+        <!-- ========== NEWS & EVENTS SECTION ========== -->
         <section id="news" class="section">
             <div class="container">
                 <div class="section-header">
-                    <h2><i class="fas fa-bullhorn"></i> የቢዝነስ ዜና እና ማስታወቂያዎች</h2>
-                    <p>ከኢትዮጵያ እና ከዓለም የሚገኙ የቢዝነስ ዜናዎች</p>
+                    <h2 class="section-title">News & Events</h2>
+                    <p class="section-subtitle">Stay updated with the latest business news and events in Ethiopia</p>
                 </div>
                 
-                <div class="news-grid">
-                    <!-- News cards will be populated by JavaScript -->
-                    <div class="loading-spinner">
-                        <i class="fas fa-spinner fa-spin"></i>
-                        <p>ዜናዎች በመጫን ላይ...</p>
-                    </div>
+                <div class="news-grid" id="newsGrid">
+                    <!-- News will be populated by JavaScript -->
                 </div>
                 
                 <div class="section-footer">
-                    <a href="#" class="view-all-btn">ሁሉንም ዜናዎች ይመልከቱ <i class="fas fa-arrow-right"></i></a>
+                    <a href="news.html" class="btn btn-outline">View All News</a>
                 </div>
             </div>
         </section>
 
-        <!-- Daily Prices Section -->
-        <section id="prices" class="section section-alt">
+        <!-- ========== DAILY COMMODITY PRICES SECTION ========== -->
+        <section id="prices" class="section prices">
             <div class="container">
                 <div class="section-header">
-                    <h2><i class="fas fa-shopping-cart"></i> የዕለት ከፍለት ዕቃዎች ዋጋ</h2>
-                    <p>የኢትዮጵያ ዋና ዋና ከተሞች የዕለት ከፍለት ዕቃዎች ዋጋ (በብር)</p>
+                    <h2 class="section-title">Daily Commodity Prices</h2>
+                    <p class="section-subtitle">Current prices of essential goods across major cities</p>
+                    <p class="date-badge ethiopian-date" id="currentDateEthiopian">Tikimt 15, 2016 E.C.</p>
                 </div>
                 
-                <!-- City Filter -->
-                <div class="filter-controls">
-                    <div class="city-filter">
-                        <label for="city-select">ከተማ ይምረጡ:</label>
-                        <select id="city-select" class="filter-select">
-                            <option value="all">ሁሉም ከተሞች</option>
-                            <!-- City options will be populated by JavaScript -->
-                        </select>
-                    </div>
-                    
-                    <div class="date-display">
-                        <span class="ethiopian-date">መስከረም 12, 2016 ዓ.ም</span>
-                        <span class="gregorian-date">September 22, 2023</span>
-                    </div>
+                <div class="price-filter">
+                    <select class="filter-select" id="cityFilter">
+                        <option value="all">All Cities</option>
+                        <option value="addis">Addis Ababa</option>
+                        <option value="bahirdar">Bahir Dar</option>
+                        <option value="mekelle">Mekelle</option>
+                        <option value="dire">Dire Dawa</option>
+                        <option value="hawassa">Hawassa</option>
+                    </select>
                 </div>
                 
-                <!-- Prices Table -->
-                <div class="table-container">
-                    <table class="prices-table">
+                <div class="table-responsive">
+                    <table class="price-table" id="priceTable">
                         <thead>
                             <tr>
-                                <th scope="col">ዕቃ</th>
-                                <th scope="col">አዲስ አበባ</th>
-                                <th scope="col">ደሴ</th>
-                                <th scope="col">ሀዋሳ</th>
-                                <th scope="col">ባህር ዳር</th>
-                                <th scope="col">ጅማ</th>
+                                <th>Item</th>
+                                <th>Addis Ababa</th>
+                                <th>Bahir Dar</th>
+                                <th>Mekelle</th>
+                                <th>Dire Dawa</th>
+                                <th>Hawassa</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <!-- Table rows will be populated by JavaScript -->
+                        <tbody id="priceTableBody">
+                            <!-- Price data will be populated by JavaScript -->
                         </tbody>
                     </table>
                 </div>
                 
-                <div class="note">
-                    <p><i class="fas fa-info-circle"></i> ማስታወሻ: ዋጋዎቹ ለመመርመር ብቻ ናቸው። ለትክክለኛ ዋጋ በቦታው ያረጋግጡ።</p>
+                <div class="section-footer">
+                    <a href="prices.html" class="btn btn-outline">View Detailed Prices</a>
                 </div>
             </div>
         </section>
 
-        <!-- Currency Exchange Section -->
-        <section id="currency" class="section">
+        <!-- ========== EXCHANGE RATES SECTION ========== -->
+        <section id="exchange" class="section exchange">
             <div class="container">
                 <div class="section-header">
-                    <h2><i class="fas fa-exchange-alt"></i> የምንዛሪ ዋጋ</h2>
-                    <p>የዓለም ዋንጫ ምንዛሪ ዋጋ ከኢትዮጵያ ብር ጋር</p>
+                    <h2 class="section-title">Exchange Rates</h2>
+                    <p class="section-subtitle">Foreign currency rates in Ethiopian Birr (ETB)</p>
                 </div>
                 
-                <div class="currency-grid">
-                    <!-- Currency cards will be populated by JavaScript -->
+                <div class="exchange-cards" id="exchangeCards">
+                    <!-- Exchange rates will be populated by JavaScript -->
                 </div>
                 
-                <!-- Currency Converter -->
-                <div class="converter-container">
-                    <h3>ምንዛሪ መለወጫ</h3>
-                    <div class="converter-form">
-                        <div class="converter-input-group">
-                            <input type="number" id="amount-input" value="100" min="1" step="1">
-                            <select id="from-currency" class="currency-select">
-                                <!-- Options will be populated by JavaScript -->
-                            </select>
-                        </div>
-                        
-                        <button id="swap-currencies" class="swap-btn" aria-label="ምንዛሪዎችን ለውጥ">
-                            <i class="fas fa-exchange-alt"></i>
-                        </button>
-                        
-                        <div class="converter-input-group">
-                            <input type="number" id="converted-amount" readonly>
-                            <select id="to-currency" class="currency-select">
-                                <!-- Options will be populated by JavaScript -->
-                            </select>
-                        </div>
-                        
-                        <button id="convert-btn" class="convert-btn">መለወጥ</button>
-                    </div>
-                    
-                    <div class="conversion-result">
-                        <p id="conversion-text"></p>
-                    </div>
+                <div class="exchange-note">
+                    <p><i class="fas fa-info-circle"></i> Rates are collected from banks and market sources. Last updated: 2 hours ago</p>
                 </div>
             </div>
         </section>
 
-        <!-- Job Openings Section -->
-        <section id="jobs" class="section section-alt">
+        <!-- ========== JOB OPENINGS SECTION ========== -->
+        <section id="jobs" class="section jobs">
             <div class="container">
                 <div class="section-header">
-                    <h2><i class="fas fa-briefcase"></i> ስራ ክፍት</h2>
-                    <p>ከኢትዮጵያ ውስጥ እና ከውጭ የሚገኙ የስራ እድሎች</p>
+                    <h2 class="section-title">Featured Jobs</h2>
+                    <p class="section-subtitle">Latest job opportunities from top companies</p>
                 </div>
                 
-                <!-- Job Categories -->
-                <div class="job-categories">
-                    <!-- Categories will be populated by JavaScript -->
-                </div>
-                
-                <!-- Job Listings -->
-                <div class="job-listings">
-                    <!-- Job cards will be populated by JavaScript -->
+                <div class="jobs-grid" id="jobsGrid">
+                    <!-- Job listings will be populated by JavaScript -->
                 </div>
                 
                 <div class="section-footer">
-                    <button id="load-more-jobs" class="load-more-btn">ተጨማሪ ስራዎችን ይመልከቱ <i class="fas fa-plus"></i></button>
+                    <a href="jobs.html" class="btn btn-primary">Post a Job</a>
+                    <a href="jobs.html" class="btn btn-outline">View All Jobs</a>
                 </div>
             </div>
         </section>
 
-        <!-- Marketplace Section -->
-        <section id="marketplace" class="section">
+        <!-- ========== MARKETPLACE SECTION ========== -->
+        <section id="marketplace" class="section marketplace">
             <div class="container">
                 <div class="section-header">
-                    <h2><i class="fas fa-store"></i> ገበያ</h2>
-                    <p>አፓርታማ፣ መኪና፣ መሳሪያዎች እና ሌሎች ዕቃዎች ይግዙ ወይም ይሽጡ</p>
+                    <h2 class="section-title">Marketplace</h2>
+                    <p class="section-subtitle">Apartments, cars, equipment and more for sale</p>
                 </div>
                 
-                <!-- Marketplace Categories -->
-                <div class="marketplace-categories">
-                    <button class="category-btn active" data-category="all">ሁሉም</button>
-                    <button class="category-btn" data-category="apartment">አፓርታማ</button>
-                    <button class="category-btn" data-category="car">መኪና</button>
-                    <button class="category-btn" data-category="equipment">መሳሪያ</button>
-                    <button class="category-btn" data-category="electronics">ኤሌክትሮኒክስ</button>
+                <!-- Category tabs -->
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">All</button>
+                    <button class="category-tab" data-category="apartments">Apartments</button>
+                    <button class="category-tab" data-category="cars">Cars</button>
+                    <button class="category-tab" data-category="electronics">Electronics</button>
                 </div>
                 
-                <!-- Marketplace Listings -->
-                <div class="marketplace-grid">
-                    <!-- Listing cards will be populated by JavaScript -->
+                <div class="marketplace-grid" id="marketplaceGrid">
+                    <!-- Marketplace listings will be populated by JavaScript -->
                 </div>
                 
                 <div class="section-footer">
-                    <button id="post-listing" class="cta-button"><i class="fas fa-plus-circle"></i> ማስታወቂያ አስገባ</button>
-                    <a href="#" class="view-all-btn">ሁሉንም ዕቃዎች ይመልከቱ <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section section-alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2><i class="fas fa-envelope"></i> አግኙን</h2>
-                    <p>ለተጨማሪ መረጃ ወይም ለማስታወቂያ ያግኙን</p>
-                </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>አድራሻ</h3>
-                                <p>አዲስ አበባ፣ ኢትዮጵያ</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h3>ስልክ</h3>
-                                <p>+251 11 123 4567</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>ኢሜይል</h3>
-                                <p>info@ethiobusinesshub.et</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h3>የሥራ ሰዓት</h3>
-                                <p>ሰኞ - አርብ: 8:30 እስከ 5:30</p>
-                                <p>ቅዳሜ: 8:30 እስከ 1:00</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-container">
-                        <form id="contact-form" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">ስም *</label>
-                                <input type="text" id="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">ኢሜይል *</label>
-                                <input type="email" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">ርዕስ</label>
-                                <input type="text" id="subject">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">መልእክት *</label>
-                                <textarea id="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn">መልእክት ላክ</button>
-                        </form>
-                    </div>
+                    <a href="marketplace.html" class="btn btn-primary">Post Listing</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>ዮም</h3>
-                    <p>የኢትዮጵያ ገበያ መረጃ በአንድ ላይ። የዕለት ከፍለት ዕቃዎች ዋጋ፣ የምንዛሪ ዋጋ፣ የስራ እድሎች እና የንግድ ማስታወቂያዎች።</p>
+                <div class="footer-about">
+                    <h3>About Yom Business</h3>
+                    <p>Yom Business is a reliable information platform providing Ethiopian market data, business news, and classified listings all in one place.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="ፌስቡክ"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="ቴሌግራም"><i class="fab fa-telegram"></i></a>
-                        <a href="#" aria-label="ትዊተር"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="ሊንክዲን"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-column">
-                    <h3>ፈጣን አገናኞች</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">መነሻ</a></li>
-                        <li><a href="#news">ዜና</a></li>
-                        <li><a href="#prices">የዕቃ ዋጋ</a></li>
-                        <li><a href="#currency">ምንዛሪ</a></li>
-                        <li><a href="#jobs">ስራ</a></li>
-                        <li><a href="#marketplace">ገበያ</a></li>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="prices.html">Prices</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-column">
-                    <h3>መረጃ</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">ስለ እኛ</a></li>
-                        <li><a href="#">የተጠቃሚ ስምምነት</a></li>
-                        <li><a href="#">የግል መረጃ ፖሊሲ</a></li>
-                        <li><a href="#">መመሪያዎች</a></li>
-                        <li><a href="#">የማስታወቂያ መመሪያ</a></li>
-                    </ul>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +251 911 234 567</p>
+                    <p><i class="fas fa-envelope"></i> info@yombusiness.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bole Road, Addis Ababa, Ethiopia</p>
                 </div>
                 
-                <div class="footer-column">
-                    <h3>የኢትዮጵያ ቀን</h3>
-                    <div class="ethiopian-date-widget">
-                        <p id="current-ethiopian-date">መስከረም 12, 2016 ዓ.ም</p>
-                        <p id="current-gregorian-date">September 22, 2023</p>
-                    </div>
-                    <div class="newsletter">
-                        <h4>የዜና ደብዳቤ</h4>
-                        <p>የዕለት ዜና እና የገበያ መረጃ በኢሜይል ይቀበሉ</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="ኢሜይል ያስገቡ" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form>
-                    </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive latest updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2023</span> ዮም. ሁሉም መብቶች የተጠበቁ ናቸው።</p>
-                <p>ይህ ድረ-ገጽ ለማሳያ ብቻ ነው።</p>
+                <p>&copy; 2016 E.C. Yom Business. All rights reserved.</p>
+                <p>Yom Business - Ethiopian Market Information</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top-btn" aria-label="ወደ ላይ ተመለስ">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- JavaScript Files -->
-    <script src="script.js"></script>
-    <script>
-        // Inline script to initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Ethiopian Business loaded successfully!');
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

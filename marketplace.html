@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Marketplace | Yom Business - Ethiopian Market Information</title>
+    <meta name="description" content="Buy and sell apartments, cars, electronics, furniture and more in Ethiopia. Free classifieds marketplace.">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Yom <span class="logo-light">Business</span></h1>
+                    <p class="logo-tagline">Ethiopian Market Information</p>
+                </a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="news.html" class="nav-link">News & Events</a></li>
+                    <li><a href="prices.html" class="nav-link">Prices</a></li>
+                    <li><a href="jobs.html" class="nav-link">Jobs</a></li>
+                    <li><a href="marketplace.html" class="nav-link active">Marketplace</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Language toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active">EN</button>
+                <button class="lang-btn amharic">አማ</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Marketplace</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Marketplace</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QUICK ACTIONS ==================== -->
+    <section class="section" style="padding: 40px 0; background: var(--bg-light);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 style="color: var(--primary-color); margin-bottom: 10px;">Buy & Sell with Confidence</h2>
+                    <p style="color: var(--text-gray);">Over 1,000+ new listings added daily</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary" id="postListingBtn"><i class="fas fa-plus"></i> Post Free Ad</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MARKETPLACE MAIN SECTION ==================== -->
+    <section class="marketplace-page-section">
+        <div class="container">
+            <div class="marketplace-layout">
+                <!-- Sidebar Filters -->
+                <aside class="marketplace-sidebar">
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-search"></i> Search</h3>
+                        <input type="text" id="marketplaceSearch" placeholder="What are you looking for?" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-tags"></i> Categories</h3>
+                        <div class="category-list">
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="all" checked>
+                                <span>All Categories <span style="color: var(--text-gray);">(245)</span></span>
+                            </label>
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="apartments">
+                                <span>Apartments <span style="color: var(--text-gray);">(89)</span></span>
+                            </label>
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="cars">
+                                <span>Cars <span style="color: var(--text-gray);">(67)</span></span>
+                            </label>
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="electronics">
+                                <span>Electronics <span style="color: var(--text-gray);">(45)</span></span>
+                            </label>
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="furniture">
+                                <span>Furniture <span style="color: var(--text-gray);">(34)</span></span>
+                            </label>
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="equipment">
+                                <span>Equipment <span style="color: var(--text-gray);">(56)</span></span>
+                            </label>
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="clothing">
+                                <span>Clothing <span style="color: var(--text-gray);">(28)</span></span>
+                            </label>
+                            <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                                <input type="radio" name="category" value="other">
+                                <span>Other <span style="color: var(--text-gray);">(26)</span></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <select id="locationFilter" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                            <option value="all">All Cities</option>
+                            <option value="addis">Addis Ababa</option>
+                            <option value="bahirdar">Bahir Dar</option>
+                            <option value="mekelle">Mekelle</option>
+                            <option value="dire">Dire Dawa</option>
+                            <option value="hawassa">Hawassa</option>
+                            <option value="gondar">Gondar</option>
+                            <option value="jimma">Jimma</option>
+                        </select>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-dollar-sign"></i> Price Range (ETB)</h3>
+                        <div class="price-range">
+                            <div class="price-inputs">
+                                <input type="number" placeholder="Min" id="minPrice">
+                                <input type="number" placeholder="Max" id="maxPrice">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-star"></i> Condition</h3>
+                        <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                            <input type="checkbox" value="new" class="condition-filter">
+                            <span>New</span>
+                        </label>
+                        <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                            <input type="checkbox" value="used" class="condition-filter">
+                            <span>Used</span>
+                        </label>
+                        <label class="filter-option" style="display: block; margin-bottom: 10px;">
+                            <input type="checkbox" value="refurbished" class="condition-filter">
+                            <span>Refurbished</span>
+                        </label>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="width: 100%;" id="applyFilters">Apply Filters</button>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 10px;" id="clearMarketplaceFilters">Clear All</button>
+                </aside>
+                
+                <!-- Marketplace Main Content -->
+                <div class="marketplace-main">
+                    <!-- Header -->
+                    <div class="marketplace-header">
+                        <div class="marketplace-search">
+                            <input type="text" id="marketplaceMainSearch" placeholder="Search in marketplace...">
+                            <button id="marketplaceSearchBtn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="marketplace-sort">
+                            <span>Sort by:</span>
+                            <select id="sortSelect">
+                                <option value="newest">Newest First</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="popular">Most Viewed</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Load More Button -->
+                    <div style="text-align: center; margin-top: 40px;">
+                        <button class="btn btn-outline" id="loadMoreBtn"><i class="fas fa-spinner"></i> Load More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== POPULAR CATEGORIES ==================== -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Categories</h2>
+                <p class="section-subtitle">Browse items by category</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+                <div class="popular-category" data-category="apartments" style="background: var(--bg-white); padding: 30px; border-radius: 10px; text-align: center; cursor: pointer;">
+                    <i class="fas fa-home" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h3 style="margin-top: 15px;">Apartments</h3>
+                    <p style="color: var(--ethiopian-red);">89 listings</p>
+                </div>
+                <div class="popular-category" data-category="cars" style="background: var(--bg-white); padding: 30px; border-radius: 10px; text-align: center; cursor: pointer;">
+                    <i class="fas fa-car" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h3 style="margin-top: 15px;">Cars</h3>
+                    <p style="color: var(--ethiopian-red);">67 listings</p>
+                </div>
+                <div class="popular-category" data-category="electronics" style="background: var(--bg-white); padding: 30px; border-radius: 10px; text-align: center; cursor: pointer;">
+                    <i class="fas fa-mobile-alt" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h3 style="margin-top: 15px;">Electronics</h3>
+                    <p style="color: var(--ethiopian-red);">45 listings</p>
+                </div>
+                <div class="popular-category" data-category="furniture" style="background: var(--bg-white); padding: 30px; border-radius: 10px; text-align: center; cursor: pointer;">
+                    <i class="fas fa-couch" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h3 style="margin-top: 15px;">Furniture</h3>
+                    <p style="color: var(--ethiopian-red);">34 listings</p>
+                </div>
+                <div class="popular-category" data-category="equipment" style="background: var(--bg-white); padding: 30px; border-radius: 10px; text-align: center; cursor: pointer;">
+                    <i class="fas fa-tools" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    <h3 style="margin-top: 15px;">Equipment</h3>
+                    <p style="color: var(--ethiopian-red);">56 listings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== POST LISTING MODAL ==================== -->
+    <div class="modal" id="postListingModal">
+        <div class="modal-content" style="max-width: 700px;">
+            <span class="modal-close" id="closeListingModal">&times;</span>
+            <h2><i class="fas fa-plus-circle"></i> Post a Free Ad</h2>
+            
+            <form id="listingForm">
+                <div class="form-group">
+                    <label for="listingCategory">Category *</label>
+                    <select id="listingCategory" required>
+                        <option value="">Select category</option>
+                        <option value="apartments">Apartments</option>
+                        <option value="cars">Cars</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="equipment">Equipment</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="listingTitle">Title *</label>
+                    <input type="text" id="listingTitle" placeholder="e.g., 2 Bedroom Apartment for Rent" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="listingDescription">Description *</label>
+                    <textarea id="listingDescription" rows="5" placeholder="Describe your item in detail..." required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="listingPrice">Price (ETB) *</label>
+                        <input type="number" id="listingPrice" placeholder="Price in Birr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="listingCondition">Condition</label>
+                        <select id="listingCondition">
+                            <option value="new">New</option>
+                            <option value="used">Used</option>
+                            <option value="refurbished">Refurbished</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="listingCity">City *</label>
+                        <input type="text" id="listingCity" placeholder="e.g., Addis Ababa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="listingArea">Area/Subcity</label>
+                        <input type="text" id="listingArea" placeholder="e.g., Bole">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="listingImages">Photos *</label>
+                    <input type="file" id="listingImages" accept="image/*" multiple required>
+                    <small style="color: var(--text-gray);">You can select up to 5 images</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="listingPhone">Phone Number *</label>
+                    <input type="tel" id="listingPhone" placeholder="+251 91 234 5678" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>I agree to the Yom Business Terms of Use</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Post Ad <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About Yom Business</h3>
+                    <p>Yom Business is a reliable information platform providing Ethiopian market data, business news, and classified listings all in one place.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="prices.html">Prices</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +251 911 234 567</p>
+                    <p><i class="fas fa-envelope"></i> info@yombusiness.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bole Road, Addis Ababa, Ethiopia</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive latest updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2016 E.C. Yom Business. All rights reserved.</p>
+                <p>Yom Business - Ethiopian Market Information</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/marketplace.js"></script>
+</body>
+</html>

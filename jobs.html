@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Jobs in Ethiopia | Yom Business - Ethiopian Market Information</title>
+    <meta name="description" content="Find the latest job opportunities in Ethiopia. Browse thousands of jobs from top companies and apply online.">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Yom <span class="logo-light">Business</span></h1>
+                    <p class="logo-tagline">Ethiopian Market Information</p>
+                </a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="news.html" class="nav-link">News & Events</a></li>
+                    <li><a href="prices.html" class="nav-link">Prices</a></li>
+                    <li><a href="jobs.html" class="nav-link active">Jobs</a></li>
+                    <li><a href="marketplace.html" class="nav-link">Marketplace</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Language toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active">EN</button>
+                <button class="lang-btn amharic">አማ</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Jobs in Ethiopia</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Jobs</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QUICK ACTIONS ==================== -->
+    <section class="section" style="padding: 40px 0; background: var(--bg-light);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 style="color: var(--primary-color); margin-bottom: 10px;">Find Your Dream Job</h2>
+                    <p style="color: var(--text-gray);">Browse thousands of job opportunities from top companies</p>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <button class="btn btn-primary" id="postJobBtn"><i class="fas fa-plus"></i> Post a Job</button>
+                    <button class="btn btn-outline" id="savedJobsBtn"><i class="far fa-bookmark"></i> Saved Jobs</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== JOBS MAIN SECTION ==================== -->
+    <section class="jobs-page-section">
+        <div class="container">
+            <div class="jobs-layout">
+                <!-- Sidebar Filters -->
+                <aside class="jobs-filters">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-filter"></i> Filters</h3>
+                        <span class="clear-filters" id="clearFilters">Clear All</span>
+                    </div>
+                    
+                    <!-- Search -->
+                    <div class="filter-group">
+                        <h4>Search</h4>
+                        <input type="text" id="jobSearch" placeholder="Job title, company, keywords..." style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                    </div>
+                    
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <h4>Job Category</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" value="marketing" class="category-filter">
+                            <span>Marketing</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="sales" class="category-filter">
+                            <span>Sales</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="it" class="category-filter">
+                            <span>IT / Technology</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="finance" class="category-filter">
+                            <span>Finance</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="management" class="category-filter">
+                            <span>Management</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="customer-service" class="category-filter">
+                            <span>Customer Service</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="engineering" class="category-filter">
+                            <span>Engineering</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Location Filter -->
+                    <div class="filter-group">
+                        <h4>City</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" value="addis" class="location-filter">
+                            <span>Addis Ababa</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="bahirdar" class="location-filter">
+                            <span>Bahir Dar</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="mekelle" class="location-filter">
+                            <span>Mekelle</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="dire" class="location-filter">
+                            <span>Dire Dawa</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="hawassa" class="location-filter">
+                            <span>Hawassa</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="gondar" class="location-filter">
+                            <span>Gondar</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Job Type Filter -->
+                    <div class="filter-group">
+                        <h4>Job Type</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" value="full-time" class="type-filter">
+                            <span>Full Time</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="part-time" class="type-filter">
+                            <span>Part Time</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="contract" class="type-filter">
+                            <span>Contract</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="internship" class="type-filter">
+                            <span>Internship</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="remote" class="type-filter">
+                            <span>Remote</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Experience Filter -->
+                    <div class="filter-group">
+                        <h4>Experience Level</h4>
+                        <label class="filter-option">
+                            <input type="checkbox" value="entry" class="exp-filter">
+                            <span>Entry Level</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="1-3" class="exp-filter">
+                            <span>1-3 Years</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="3-5" class="exp-filter">
+                            <span>3-5 Years</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="5+" class="exp-filter">
+                            <span>5+ Years</span>
+                        </label>
+                    </div>
+                    
+                    <!-- Salary Range -->
+                    <div class="filter-group">
+                        <h4>Salary Range (ETB)</h4>
+                        <div class="price-range">
+                            <select style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                                <option value="">Any salary</option>
+                                <option value="5000">Below 5,000</option>
+                                <option value="5000-10000">5,000 - 10,000</option>
+                                <option value="10000-15000">10,000 - 15,000</option>
+                                <option value="15000-20000">15,000 - 20,000</option>
+                                <option value="20000-30000">20,000 - 30,000</option>
+                                <option value="30000+">Above 30,000</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Posted -->
+                    <div class="filter-group">
+                        <h4>Date Posted</h4>
+                        <label class="filter-option">
+                            <input type="radio" name="date" value="today">
+                            <span>Today</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="date" value="week">
+                            <span>Last 7 days</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="date" value="month">
+                            <span>Last 30 days</span>
+                        </label>
+                    </div>
+                </aside>
+                
+                <!-- Jobs Main Content -->
+                <div class="jobs-main">
+                    <!-- Search and Sort Bar -->
+                    <div class="jobs-search">
+                        <input type="text" id="mainSearch" placeholder="Search by job title, company, location...">
+                        <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                    
+                    <!-- Results Header -->
+                    <div class="jobs-count">
+                        <span id="jobsCount">245</span> jobs found
+                        <select style="float: right; padding: 5px; border: 1px solid var(--border-color); border-radius: 5px;">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="salary-high">Salary (High to Low)</option>
+                            <option value="salary-low">Salary (Low to High)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Job Listings -->
+                    <div class="jobs-list" id="jobsList">
+                        <!-- Jobs will be populated by JavaScript -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED COMPANIES ==================== -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Companies</h2>
+                <p class="section-subtitle">Top employers hiring now</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-building" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>Commercial Bank</h3>
+                    <p style="color: var(--ethiopian-red);">12 openings</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-building" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>Dashin Bank</h3>
+                    <p style="color: var(--ethiopian-red);">8 openings</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-building" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>Ethiopian Airlines</h3>
+                    <p style="color: var(--ethiopian-red);">15 openings</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-building" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>Ethio Telecom</h3>
+                    <p style="color: var(--ethiopian-red);">6 openings</p>
+                </div>
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-building" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h3>Safaricom</h3>
+                    <p style="color: var(--ethiopian-red);">10 openings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== JOB ALERT ==================== -->
+    <section class="section" style="background: linear-gradient(135deg, var(--ethiopian-green), var(--ethiopian-blue)); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 20px;">Get Job Alerts</h2>
+            <p style="margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Subscribe to receive email notifications when new jobs matching your criteria are posted</p>
+            
+            <form style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="email" placeholder="Your email address" style="flex: 1; padding: 15px; border: none; border-radius: 5px;">
+                <button class="btn" style="background: var(--ethiopian-yellow); color: var(--text-dark); padding: 15px 30px;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==================== JOB APPLICATION MODAL ==================== -->
+    <div class="modal" id="jobApplicationModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h2><i class="fas fa-file-alt"></i> Apply for Job</h2>
+            <p id="modalJobTitle" style="color: var(--primary-color); font-weight: 600; margin-bottom: 20px;"></p>
+            
+            <form id="applicationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appFirstName">First Name *</label>
+                        <input type="text" id="appFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appLastName">Last Name *</label>
+                        <input type="text" id="appLastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appEmail">Email *</label>
+                    <input type="email" id="appEmail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appPhone">Phone Number *</label>
+                    <input type="tel" id="appPhone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appExperience">Years of Experience *</label>
+                    <select id="appExperience" required>
+                        <option value="">Select</option>
+                        <option value="0">No experience</option>
+                        <option value="1">Less than 1 year</option>
+                        <option value="1-3">1-3 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5-10">5-10 years</option>
+                        <option value="10+">10+ years</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appEducation">Education Level *</label>
+                    <select id="appEducation" required>
+                        <option value="">Select</option>
+                        <option value="highschool">High School</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="degree">Bachelor's Degree</option>
+                        <option value="masters">Master's Degree</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appCoverLetter">Cover Letter</label>
+                    <textarea id="appCoverLetter" rows="5" placeholder="Tell us about yourself and why you're a good fit..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appResume">Upload CV (PDF, DOC) *</label>
+                    <input type="file" id="appResume" accept=".pdf,.doc,.docx" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>I agree to share my information with the employer</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About Yom Business</h3>
+                    <p>Yom Business is a reliable information platform providing Ethiopian market data, business news, and classified listings all in one place.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="prices.html">Prices</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +251 911 234 567</p>
+                    <p><i class="fas fa-envelope"></i> info@yombusiness.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bole Road, Addis Ababa, Ethiopia</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive latest updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2016 E.C. Yom Business. All rights reserved.</p>
+                <p>Yom Business - Ethiopian Market Information</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/jobs.js"></script>
+</body>
+</html>

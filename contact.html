@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Contact Us | Yom Business - Ethiopian Market Information</title>
+    <meta name="description" content="Get in touch with Yom Business. Find our office locations, phone numbers, and send us a message.">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Yom <span class="logo-light">Business</span></h1>
+                    <p class="logo-tagline">Ethiopian Market Information</p>
+                </a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="news.html" class="nav-link">News & Events</a></li>
+                    <li><a href="prices.html" class="nav-link">Prices</a></li>
+                    <li><a href="jobs.html" class="nav-link">Jobs</a></li>
+                    <li><a href="marketplace.html" class="nav-link">Marketplace</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Language toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active">EN</button>
+                <button class="lang-btn amharic">አማ</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2><i class="fas fa-address-card"></i> Our Office</h2>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Head Office</h3>
+                            <p>Bole Road, Dawa Building 3rd Floor</p>
+                            <p>Addis Ababa, Ethiopia</p>
+                            <p>P.O. Box: 1234</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone Numbers</h3>
+                            <p><strong>Sales & Advertising:</strong> +251 911 234 567</p>
+                            <p><strong>Customer Service:</strong> +251 922 345 678</p>
+                            <p><strong>Technical Support:</strong> +251 933 456 789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Addresses</h3>
+                            <p><strong>General:</strong> info@yombusiness.com</p>
+                            <p><strong>Sales:</strong> sales@yombusiness.com</p>
+                            <p><strong>Support:</strong> support@yombusiness.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p><strong>Monday - Friday:</strong> 8:30 - 5:30</p>
+                            <p><strong>Saturday:</strong> 9:00 - 1:00</p>
+                            <p><strong>Sunday:</strong> Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links" style="justify-content: flex-start; margin-top: 30px;">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+                    <p>Have questions? Want to give feedback? Need more information? Fill out the form below and we'll get back to you soon.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="sales">Sales & Advertising</option>
+                                <option value="support">Technical Support</option>
+                                <option value="jobs">Job Application</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consent" required>
+                                <span>I confirm that the information provided above is accurate</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MAP SECTION ==================== -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Location</h2>
+                <p class="section-subtitle">Find us on the map</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.793181665584!2d38.763889!3d9.009167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f7c5b3b8c5%3A0x8b8b8b8b8b8b8b8b!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BRANCH OFFICES ==================== -->
+    <section class="offices-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Branches</h2>
+                <p class="section-subtitle">Find us in other cities</p>
+            </div>
+            
+            <div class="offices-grid">
+                <div class="office-card">
+                    <h3><i class="fas fa-building"></i> Addis Ababa (Head Office)</h3>
+                    <p><i class="fas fa-map-pin"></i> Bole Road, Dawa Building 3rd Floor</p>
+                    <p><i class="fas fa-phone"></i> +251 111 234 567</p>
+                    <p><i class="fas fa-envelope"></i> addis@yombusiness.com</p>
+                </div>
+                
+                <div class="office-card">
+                    <h3><i class="fas fa-building"></i> Bahir Dar</h3>
+                    <p><i class="fas fa-map-pin"></i> Piazza Area, Zenebe Building</p>
+                    <p><i class="fas fa-phone"></i> +251 582 345 678</p>
+                    <p><i class="fas fa-envelope"></i> bahirdar@yombusiness.com</p>
+                </div>
+                
+                <div class="office-card">
+                    <h3><i class="fas fa-building"></i> Mekelle</h3>
+                    <p><i class="fas fa-map-pin"></i> Ayder Area, Addis Building</p>
+                    <p><i class="fas fa-phone"></i> +251 344 567 890</p>
+                    <p><i class="fas fa-envelope"></i> mekelle@yombusiness.com</p>
+                </div>
+                
+                <div class="office-card">
+                    <h3><i class="fas fa-building"></i> Dire Dawa</h3>
+                    <p><i class="fas fa-map-pin"></i> Megenagna Area, Ketema Building</p>
+                    <p><i class="fas fa-phone"></i> +251 252 345 678</p>
+                    <p><i class="fas fa-envelope"></i> dire@yombusiness.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-grid" style="max-width: 800px; margin: 0 auto;">
+                <details class="faq-item" style="margin-bottom: 15px; background: var(--bg-white); padding: 20px; border-radius: 10px;">
+                    <summary style="font-weight: 600; color: var(--primary-color); cursor: pointer;">How do I post an ad on Yom Business?</summary>
+                    <p style="margin-top: 15px; color: var(--text-gray);">To post an ad, first create a free account. Then go to the Marketplace section and click "Post Listing". Fill in the details about your item and submit. Basic listings are free!</p>
+                </details>
+                
+                <details class="faq-item" style="margin-bottom: 15px; background: var(--bg-white); padding: 20px; border-radius: 10px;">
+                    <summary style="font-weight: 600; color: var(--primary-color); cursor: pointer;">How often are prices updated?</summary>
+                    <p style="margin-top: 15px; color: var(--text-gray);">Commodity prices are updated twice daily - at 8:00 AM and 3:00 PM. Exchange rates are updated in real-time from bank sources.</p>
+                </details>
+                
+                <details class="faq-item" style="margin-bottom: 15px; background: var(--bg-white); padding: 20px; border-radius: 10px;">
+                    <summary style="font-weight: 600; color: var(--primary-color); cursor: pointer;">Is posting jobs free?</summary>
+                    <p style="margin-top: 15px; color: var(--text-gray);">Basic job postings are free for small businesses. Premium listings with featured placement are available for a small fee.</p>
+                </details>
+                
+                <details class="faq-item" style="margin-bottom: 15px; background: var(--bg-white); padding: 20px; border-radius: 10px;">
+                    <summary style="font-weight: 600; color: var(--primary-color); cursor: pointer;">What items are not allowed on the marketplace?</summary>
+                    <p style="margin-top: 15px; color: var(--text-gray);">Illegal items, counterfeit products, drugs, weapons, and any items prohibited by Ethiopian law are not allowed. We also prohibit hateful or discriminatory content.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About Yom Business</h3>
+                    <p>Yom Business is a reliable information platform providing Ethiopian market data, business news, and classified listings all in one place.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="prices.html">Prices</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +251 911 234 567</p>
+                    <p><i class="fas fa-envelope"></i> info@yombusiness.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bole Road, Addis Ababa, Ethiopia</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive latest updates</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2016 E.C. Yom Business. All rights reserved.</p>
+                <p>Yom Business - Ethiopian Market Information</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
